@@ -26,7 +26,7 @@ for entry in lmhp:
     wardName = entry[0] + ": " + entry[1]
     if entry[8] != 0:
         if wardName in wardToLPC:
-            ldata.append((wardToLPC[wardName],float(entry[8])))
+            ldata.append((float(entry[8]),wardToLPC[wardName]))
 
 data = array(ldata)
 
@@ -47,8 +47,8 @@ ys = xs * lineFit[0] + lineFit[1]
 
 plot (xs,ys)
 
-xlabel ('% change in labour vote')
-ylabel ('% change in house price')
+xlabel ('% change in house price')
+ylabel ('% change in labour vote')
 show()
 
 
